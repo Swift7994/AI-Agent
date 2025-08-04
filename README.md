@@ -27,6 +27,6 @@ Activate the virtual environment:
 ```bash
 source .venv/bin/activate
 ```
-You should see (your-project-name) at the beginning of your terminal prompt.
+You should see (your-directory-name) at the beginning of your terminal prompt.
 
 
