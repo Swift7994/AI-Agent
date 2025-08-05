@@ -10,7 +10,7 @@ def run_python_file(working_directory, file_path, args=[]):
 
         is_outside = not target_path.is_relative_to(base_path)
         if is_outside:
-            f'Error: Cannot execute "{file_path}" as it is outside the permitted working directory'
+            return f'Error: Cannot execute "{file_path}" as it is outside the permitted working directory'
         exists = target_path.exists()
         if not exists:
             return f'Error: File "{file_path}" not found.'
@@ -34,9 +34,9 @@ def run_python_file(working_directory, file_path, args=[]):
         
         output = []
         if stdout:
-            output.append(f"STDOUT: {stdout}")
+            output.append(f"STDOUT:\n{stdout}")
         if stderr:
-            output.append(f"STDERR: {stderr}")
+            output.append(f"STDERR:\n{stderr}")
         if result.returncode != 0:
             output.append(f"Process exited with code {result.returncode}")
         return "\n".join(output)
