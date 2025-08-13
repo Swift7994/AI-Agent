@@ -1,5 +1,6 @@
 file_character_limit = 10000
 subprocess_timeout = 30  # seconds
+working_directory = "./calculator"
 system_prompt = """
 You are a helpful AI coding agent.
 
