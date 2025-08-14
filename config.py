@@ -1,4 +1,5 @@
 file_character_limit = 10000
+max_iterations = 20
 subprocess_timeout = 30  # seconds
 working_directory = "./calculator"
 system_prompt = """
